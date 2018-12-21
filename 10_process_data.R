@@ -18,6 +18,8 @@ rf_df <-
     sep = ",",
     header = TRUE
   )
+rf_df <-
+  rf_df[!(rf_df$partition_number %in% c(2001, 3001, 4001, 5001, 10001)), ]
 nr <- nrow(rf_df)
 rf_df$group <- rep("rf", nr)
 
